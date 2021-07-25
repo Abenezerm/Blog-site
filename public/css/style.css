@@ -1,8 +1,11 @@
 body{
   background-color: #DDDEDE;
-  margin: 0 0 0 0;
+  margin: 120px 0 0 0;
   text-align: -webkit-center;
+}
 
+.hide{
+  display: none;
 }
 
 .header{
@@ -11,7 +14,8 @@ body{
   flex-flow: column;
   box-shadow: 15px 20px 20px rgb(42, 49, 50, 0.6);
   width: 100%;
-
+  position: fixed;
+  top: 0;
 
 }
 .title{
@@ -44,11 +48,10 @@ body{
 }
 .validation {
   margin-top: 40px;
-  background: rgb(35, 33, 34, 0.8);
-  width: 40%;
+  width: 50%;
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
-  color: #A5C05B;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.3);
+  color: rgb(35, 33, 34, 0.8);
   padding-bottom: 10px;
 }
 
@@ -66,24 +69,35 @@ body{
   margin-top: 10px;
 }
 .btn{
+  width: 15%;
+  border: none;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #A5C05B;
   color: rgb(35, 33, 34, 0.8);
-  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 10px 10px 10px rgb(42, 49, 50, 0.3);
+}
+.btn:hover{
+  width: 12%;
+  box-shadow: 10px 10px 10px rgb(42, 49, 50, 0.1);
 }
 
 .forum-link{
-  color: #DDDEDE;
+  color: #A5C05B;
   text-decoration: none;
 }
 .forum-link:hover{
-  color: #A5C05B;
+  text-decoration: underline;
 }
 .dashboard h2{
- font-family: 'Montserrat', sans-serif;
- color: rgb(35, 33, 34, 0.8);
- font-size: 1.5rem;
+  background: rgb(255,255,255, 0.3);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 40%;
+  color: rgb(35, 33, 34, 0.8);
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.4);
 }
 .dashboard .dash-body{
   width: 90%;
@@ -93,8 +107,9 @@ body{
   padding-left: 15%;
 }
 .dashboard .post{
-  background-color: white;
-  box-shadow: 30px 30px 30px rgb(42, 49, 50, 0.2);
+  background: rgb(255,255,255, 0.2);
+  color: #7BA4A8;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.4);
   padding-left: 10px;
   font-family: 'Montserrat', sans-serif;
   margin: 10px 10px 10px 10px;
@@ -102,9 +117,11 @@ body{
 }
 
 .dashboard .post h4{
+  color: rgb(35, 33, 34, 0.8);
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 1.5rem;
+
 }
 .dashboard .post h6{
   margin-top: 5px;
@@ -112,32 +129,39 @@ body{
   margin-bottom: 10px;
 }
 .dashboard .post:hover{
-  transform: rotate(1deg);
+  width: 76%;
 }
 .new-blog-btn{
+  width: 20%;
+  border: none;
   margin-top: 15px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   background: rgb(35, 33, 34, 0.8);
   color: #A5C05B;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.3);
+  box-shadow: 15px 20px 15px rgb(42, 49, 50, 0.5);
+}
+.new-blog-btn:hover{
+  width: 21%;
 }
 .edit-blog .edit-header{
+  background: rgb(255,255,255, 0.2);
   margin-top: 30px;
+  margin-bottom: 30px;
   width: 40%;
   color: rgb(35, 33, 34, 0.8);
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.5);
 }
 
 .edit-blog .edit-body{
-  background: rgb(35, 33, 34, 0.8);
+  background: rgb(255,255,255, 0.2);
   width: 80%;
   display: flex;
   flex-flow: column;
   font-family: 'Montserrat', sans-serif;
-  color: #A5C05B;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
+  color: rgb(35, 33, 34, 0.8);
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.7);
 }
 
 .text-area{
@@ -149,8 +173,38 @@ body{
 
 .edit-btn{
   align-self: center;
-  width: 40%;
-  margin-top: 1px;
+  width: 35%;
+  margin-top: 5px;
   margin-bottom: 5px;
-  color: #DDDEDE;
+  background-color: #7BA4A8;
+  color:#DDDEDE;
+  border-radius: 0;
+  border: none;
+  box-shadow: 10px 10px 10px rgb(42, 49, 50, 0.2);
+
+}
+.edit-btn:hover{
+  box-shadow: 15px 15px 15px rgb(42, 49, 50, 0.4);
+  width: 38%;
+}
+.full-post{
+  background: rgb(255,255,255, 0.3);
+  width: 80%;
+  box-shadow: 15px 20px 15px rgb(42, 49, 50, 0.6);
+}
+.post-title h6{
+  text-decoration: underline;
+  margin-top: 25px;;
+  margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(35, 33, 34, 0.8);
+}
+.full-post .post-detail{
+  color: #7BA4A8;
+  padding-bottom: 5px;
+}
+.full-post .post-body{
+  color: rgb(35, 33, 34, 0.8);
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 20px;
 }
