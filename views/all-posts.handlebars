@@ -1,0 +1,16 @@
+<div class="full-post">
+  {{#each posts}}
+    <div class="post-title">
+      <a href="/post/{{id}}" class="title">
+        <h6>📖 {{title}}</h6>
+      </a>
+      <div class="post-detail">
+        Posted by {{User.username}} on {{format_date createdAt}}
+      </div>
+    </div>
+    <div class="post-body">
+
+      {{body}}
+    </div>
+  {{/each}}
+</div>
