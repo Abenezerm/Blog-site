@@ -5,10 +5,6 @@ body{
 
 }
 
-.hide{
-  display: none;
-}
-
 .header{
   background: rgb(35, 33, 34, 0.8);
   color: #A5C05B;
@@ -125,4 +121,36 @@ body{
   background: rgb(35, 33, 34, 0.8);
   color: #A5C05B;
   box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.3);
+}
+.edit-blog .edit-header{
+  margin-top: 30px;
+  width: 40%;
+  color: rgb(35, 33, 34, 0.8);
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
+}
+
+.edit-blog .edit-body{
+  background: rgb(35, 33, 34, 0.8);
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  font-family: 'Montserrat', sans-serif;
+  color: #A5C05B;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
+}
+
+.text-area{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.edit-btn{
+  align-self: center;
+  width: 40%;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  color: #DDDEDE;
 }

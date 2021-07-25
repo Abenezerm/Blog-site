@@ -1,0 +1,8 @@
+<div class="dash-body">
+  {{#each posts}}
+  <a href="/dashboard/edit/{{id}}" class="post">
+    <h4>📖 {{title}}</h4>
+    <h6>🗓 {{format_date createdAt}}</h6>
+  </a>
+  {{/each}}
+</div>
