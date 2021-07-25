@@ -1,0 +1,86 @@
+body{
+  background-color: #DDDEDE;
+  margin: 0 0 0 0;
+  text-align: -webkit-center;
+
+}
+
+.hide{
+  display: none;
+}
+
+.header{
+  background: rgb(35, 33, 34, 0.8);
+  color: #A5C05B;
+  flex-flow: column;
+  box-shadow: 15px 20px 20px rgb(42, 49, 50, 0.6);
+  width: 100%;
+
+
+}
+.title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  padding-top: 0px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.header .navigation-bar{
+  background-color: #7BA4A8;
+  display: flex;
+  padding-left: 15px;
+
+
+}
+
+.header .navigation-bar .navigation-btn{
+  padding: 3px 10px 3px 10px;
+  color: #DDDEDE ;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1;
+}
+
+.header .navigation-bar .navigation-btn:hover {
+  background-color: #A5C05B;
+  color: rgb(35, 33, 34, 0.8);
+}
+.validation {
+  margin-top: 40px;
+  background: rgb(35, 33, 34, 0.8);
+  width: 40%;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
+  color: #A5C05B;
+  padding-bottom: 10px;
+}
+
+.card-title{
+  font-family: 'Montserrat', sans-serif;
+  color: #DDDEDE;
+  margin-bottom: 10px;
+  background-color: #7BA4A8;
+}
+.card-title h3{
+  padding-bottom: 3px;
+}
+.pswrd-input{
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.btn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #A5C05B;
+  color: rgb(35, 33, 34, 0.8);
+  border-radius: 3px;
+}
+
+.forum-link{
+  color: #DDDEDE;
+  text-decoration: none;
+}
+.forum-link:hover{
+  color: #A5C05B;
+}
