@@ -4,24 +4,25 @@ const express = require('express');//Express
 const session  = require('express-session'); //to keep track of user data on site..
 const exphbs  = require('express-handlebars'); //handlebars...
 const helpers = require('./utils/helpers');
-const sequilize = require('./config/connection')
+const sequelize = require('./config/config');
 
 const app = express();
 const PORT = process.env.PORT || 3001; //set port..
 
-const hbs = exphbs.create({})
+const hbs = exphbs.create({ helpers })
 
 //Initilize sequilize with session store...
-const SequilzeStore = require('connect-session-sequelize')(session.store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 //set up session and connects to sequelize db...
 const sess = {
   secret: process.env.SECRET,
   cookie:{}, //Tells session to use cookies...
   resave: false,
+  saveUninitialized: true,
   //sets up session store..
-  store: new SequilzeStore({
-    db: sequelize,
+  store: new SequelizeStore({
+    db: sequelize
   }),
 };
 app.use(session(sess));
@@ -38,6 +39,6 @@ app.use(require('./controllers/'));
 
 //starts listening on port...
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`)
-  sequilize.sync({ force: false});
+  console.log(`App listening on http://localhost:${PORT}`);
+  sequelize.sync({ force: false });
 });

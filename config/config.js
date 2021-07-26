@@ -1,5 +1,5 @@
 //configure sequilize as ORM...
-const Sequelize = require('sequilize');
+const Sequelize = require('sequelize');
 
 //configure our variables in the dotenv file
 require('dotenv').config();
