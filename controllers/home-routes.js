@@ -55,3 +55,25 @@ router.get('/post/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/login', (req, res) =>{
+  //Takes the user to all posts if they are logged in already...
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  //renders the login handlebars if they are not...
+  res.render('login');
+});
+
+router.get('/signup', (req, res) =>{
+  //Takes the user to all posts if they are logged in already...
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  //renders the signin handlebars if they are not...
+  res.render('signup');
+});
+
+module.export = router;
