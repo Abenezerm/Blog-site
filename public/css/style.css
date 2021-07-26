@@ -69,7 +69,6 @@ body{
   margin-top: 10px;
 }
 .btn{
-  width: 15%;
   border: none;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -79,7 +78,7 @@ body{
   box-shadow: 10px 10px 10px rgb(42, 49, 50, 0.3);
 }
 .btn:hover{
-  width: 12%;
+  width: 20%;
   box-shadow: 10px 10px 10px rgb(42, 49, 50, 0.1);
 }
 
@@ -163,17 +162,21 @@ body{
   color: rgb(35, 33, 34, 0.8);
   box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.7);
 }
-
+.pswrd-input, .username-input{
+  border-style: none;
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.3);
+}
 .text-area{
   width: 90%;
   margin-left: 5%;
   margin-bottom: 5px;
   padding-bottom: 10px;
+  border-style: none;
+  box-shadow: 15px 15px 15px rgb(42, 49, 50, 0.2);
 }
 
 .edit-btn{
   align-self: center;
-  width: 35%;
   margin-top: 5px;
   margin-bottom: 5px;
   background-color: #7BA4A8;
@@ -185,7 +188,7 @@ body{
 }
 .edit-btn:hover{
   box-shadow: 15px 15px 15px rgb(42, 49, 50, 0.4);
-  width: 38%;
+  width: 15%;
 }
 .full-post{
   background: rgb(255,255,255, 0.3);
