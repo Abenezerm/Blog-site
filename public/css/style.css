@@ -90,7 +90,7 @@ body{
   text-decoration: underline;
 }
 .dashboard h2{
-  background: rgb(255,255,255, 0.3);
+  background: rgb(255,255,255, 0.8);
   margin-top: 30px;
   margin-bottom: 30px;
   width: 40%;
@@ -106,9 +106,9 @@ body{
   padding-left: 15%;
 }
 .dashboard .post{
-  background: rgb(255,255,255, 0.2);
+  background: rgb(255,255,255, 0.5);
   color: #7BA4A8;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.4);
+  box-shadow:15px 15px 5px rgb(42, 49, 50, 0.1);
   padding-left: 10px;
   font-family: 'Montserrat', sans-serif;
   margin: 10px 10px 10px 10px;
@@ -116,8 +116,11 @@ body{
 }
 
 .dashboard .post h4{
+  box-shadow: 20px 30px 25px rgb(42, 49, 50, 0.4);
+  background: rgb(255,255,255, 0.8);
+  width: 98%;
   color: rgb(35, 33, 34, 0.8);
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 5px;
   font-size: 1.5rem;
 
@@ -126,6 +129,7 @@ body{
   margin-top: 5px;
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: #DDDEDE;
 }
 .dashboard .post:hover{
   width: 76%;
@@ -144,13 +148,13 @@ body{
   width: 21%;
 }
 .edit-blog .edit-header{
-  background: rgb(255,255,255, 0.2);
+  background: rgb(255,255,255, 0.5);
   margin-top: 30px;
   margin-bottom: 30px;
   width: 40%;
   color: rgb(35, 33, 34, 0.8);
   font-family: 'Montserrat', sans-serif;
-  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.5);
+  box-shadow: 15px 20px 25px rgb(42, 49, 50, 0.6);
 }
 
 .edit-blog .edit-body{
@@ -193,21 +197,84 @@ body{
 .full-post{
   background: rgb(255,255,255, 0.3);
   width: 80%;
+  margin-top: 25px;
   box-shadow: 15px 20px 15px rgb(42, 49, 50, 0.6);
 }
 .post-title h6{
+  background: white;
   text-decoration: underline;
-  margin-top: 25px;;
+  width:90%;
   margin-bottom: 5px;
   font-family: 'Montserrat', sans-serif;
   color: rgb(35, 33, 34, 0.8);
+  box-shadow: 0px 30px 15px rgb(42, 49, 50, 0.5);
 }
 .full-post .post-detail{
-  color: #7BA4A8;
+  color: #DDDEDE;
   padding-bottom: 5px;
 }
 .full-post .post-body{
+  background: white;
+  width: 98%;
   color: rgb(35, 33, 34, 0.8);
   font-family: 'Montserrat', sans-serif;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 15px 15px 15px rgb(42, 49, 50, 0.5);
+}
+
+.single-post{
+  width:95%;
+  background: rgb(255,255,255, 0.8);
+  box-shadow: 0px 20px 20px rgb(42, 49, 50, 0.3);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.single-post .card .card-header h2{
+  width: 95%;
+  font-family: 'Montserrat', sans-serif;
+  color: #A5C05B;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgb(35, 33, 34, 0.8);
+  box-shadow: 0px 15px 15px rgb(42, 49, 50, 0.6);
+}
+
+.single-post .card-details{
+  box-shadow: 0px 15px 15px rgb(42, 49, 50, 0.6);
+  width:80%;
+  background-color: #7BA4A8;
+  color: #DDDEDE;
+  margin-bottom: 10px;
+}
+
+.single-post .card-body{
+  box-shadow: 0px 15px 15px rgb(42, 49, 50, 0.6);
+  background-color: white;
+  width:98%;
+}
+.single-post .comment-body h3{
+  background-color: #7BA4A8;
+  color: #DDDEDE;
+}
+.single-post .card-comment-forum h3{
+  display: flex;
+  flex-flow: column;
+  background-color: #7BA4A8;
+  color: #DDDEDE;
+}
+.single-post .comment-body, .card-comment-forum{
+  width: 80%;
+  box-shadow: 0px 10px 10px rgb(42, 49, 50, 0.3)
+}
+
+.card-comment-forum{
+  display: flex;
+  flex-flow: column;
+}
+
+.card-comment-forum .form-input{
+  border-style: none;
+  box-shadow: 0px 10px 10px rgb(42, 49, 50, 0.5);
+  width: 90%;
 }
