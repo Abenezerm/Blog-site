@@ -1,44 +1,40 @@
 //Dependecies...
-const path = require('path');//To navogate directory...
-const express = require('express');//Express
-const session  = require('express-session'); //to keep track of user data on site..
-const exphbs  = require('express-handlebars'); //handlebars...
+const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
-const sequelize = require('./config/config');
 
 const app = express();
-const PORT = process.env.PORT || 3001; //set port..
+const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ helpers })
-
-//Initilize sequilize with session store...
+const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-//set up session and connects to sequelize db...
 const sess = {
-  secret: process.env.SECRET,
-  cookie:{}, //Tells session to use cookies...
+  secret: 'Super secret secret',
+  cookie: {},
   resave: false,
   saveUninitialized: true,
-  //sets up session store..
   store: new SequelizeStore({
     db: sequelize
-  }),
+  })
 };
+
 app.use(session(sess));
 
-//set the view engine to handlebars...
+const hbs = exphbs.create({ helpers });
+
 app.engine('handlebars', hbs.engine);
-app.set('veiw engine', 'handlebars');
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
-app.use(express.static(path.join(__dirname, 'public')))//serves the public folder
-//serves routes...
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(require('./controllers/'));
 
-//starts listening on port...
 app.listen(PORT, () => {
-  console.log(`App listening on http://localhost:${PORT}`);
+  console.log(`App listening on port ${PORT}!`);
   sequelize.sync({ force: false });
 });

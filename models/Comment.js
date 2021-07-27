@@ -1,5 +1,5 @@
-const { Sequelize, Model, DataType } = require('sequelize');
-const sequelize = require('./config/connection');
+const { Sequelize, Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/config');
 
 class Comment extends Model{}
 
@@ -9,26 +9,10 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-
-    userId: {
-        type: DataTypes.INTEGER,
-        refrences: {
-          model:'User',
-          key:'id',
-        },
-      },
-      
-      postID: {
-        type: DataType.INTEGER,
-        refrences: {
-          model: 'Post',
-          key: 'id',
-        }
-      }
   },
   {
     sequelize
   }
 );
 
-module.exports = Post;
+module.exports = Comment;

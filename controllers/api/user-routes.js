@@ -3,8 +3,8 @@ const { User } = require('../../models');
 
 //creates new user...
 router.post('/', async (req, res) => {
+  console.log('you hit teh route!')
   try {
-
     const newUser = await User.create({
       username: req.body.username,
       password: req.body.password,
@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
       res.json(newUser);
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
