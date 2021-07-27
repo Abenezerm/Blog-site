@@ -14,7 +14,7 @@ As a user, you will be greeted by the home page, you can also see article discus
 ![alt text](images/comment.png)
 
 However, inorder to post or comment you must first sign up, this is done by clicking the 'sign up instead' link.
-[alt text](images/signin.png)
+![alt text](images/signin.png)
 
 ## Link
 [Heroku Deployment](https://polar-oasis-25782.herokuapp.com/)
