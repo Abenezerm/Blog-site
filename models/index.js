@@ -9,7 +9,7 @@ const Comment = require('./Comment');
  });
 
  Post.hasMany(Comment, {
-   foreignKey: 'postID',
+   foreignKey: 'postId',
    onDelete: 'CASCADE'
  });
 

@@ -34,26 +34,23 @@ router.get('/new', withAuth, (req, res) => {
   });
 });
 
-//renders edit handlebars...
-router.get('edit/:id', withAuth, async (req, res) => {
-  try {
-    //finds post by id param
-    const postData = await Post.findByPk(req.params.id);
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+      const postData = await Post.findByPk(req.params.id);
 
-    //if the post exists it will render edit handlbars or it will return a 404 status...
-    if (postData) {
-      const post = postData.get({ plain: true });
+      if (postData) {
+        const post = postData.get({ plain: true });
 
-      res.render('edit-post', {
-        layout: 'dashboard',
-        post,
-      });
-    } else {
-      res.status(404).end();
+        res.render('edit-post', {
+          layout: 'dashboard',
+          post,
+        });
+      } else {
+        res.status(404).end();
+      }
+    } catch (err) {
+      res.redirect('login');
     }
-  } catch (err) {
-    res.redirect('login');
-  }
-});
+  });
 
 module.exports = router;

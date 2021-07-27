@@ -9,7 +9,7 @@
     <div class="card-body">
       {{post.body}}
     </div>
-  </article>
+  </article >
 
   {{#if post.Comments}}
     <section class="comment-body">
@@ -21,7 +21,7 @@
         {{#each post.Comments}}
           <div>
             <p>
-              {{body}}
+              "{{body}}"
             </p>
             <p>
               &mdash; {{User.username}}, {{format_date createdAt}}
